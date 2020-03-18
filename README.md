@@ -1,2 +1,2 @@
-# jobs
+# Jobs && Skills
 Portifólio de trabalho
