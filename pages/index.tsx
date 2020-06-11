@@ -116,17 +116,25 @@ export const Cards = styled.div`
   flex-wrap: wrap;
   display: flex;
   & > div{
+    width:100%;
     color: #303030;
     background: #fff;
-    max-width:310px;
-    width:100%;
     padding:10px;
-    margin:10px;
+    flex:1 1 auto;
+    margin:5px; 
     align-items: inherit;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-
+    @media (min-width: 768px) {
+      width:45%;
+    }
+    @media (min-width: 980px) {
+      width:32%;
+    }
+    
+   
+    
     span{
       background: #1AE8AA;
       padding:5px;
