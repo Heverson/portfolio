@@ -1,43 +1,22 @@
 {
-  "name": "portifolio",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-gtm-module": "^2.0.8",
-    "react-scripts": "3.4.0",
-    "react-slick": "^0.25.2",
-    "slick-carousel": "^1.8.1"
+    "axios": "^0.19.2",
+    "babel-plugin-styled-components": "^1.10.7",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.0.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
-  },
-  "homepage": "http://heverson.github.io/portfolio",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.5"
   }
 }
