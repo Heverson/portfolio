@@ -138,8 +138,9 @@ export const Cards = styled.div`
     
     a{
       color: #303030;
-      text-decoration: underline;
-      font-size: 14px;
+      background: #000;
+      padding: 2px 5px;
+      border-radius: 5px;
     }
     
     span{
