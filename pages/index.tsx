@@ -137,8 +137,8 @@ export const Cards = styled.div`
     }
     
     a{
-      color: #303030;
-      background: #000;
+      color: #FFF;
+      background: #303030;
       padding: 2px 5px;
       border-radius: 5px;
     }
