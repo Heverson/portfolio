@@ -1,7 +1,7 @@
 import React from 'react';
 import {GetStaticProps } from 'next';
 import styled from 'styled-components';
-
+import {FiGithub, FiArrowUpRight} from 'react-icons/fi';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -55,11 +55,11 @@ const Home : React.FC<Props> = ({repositories}) => {
         </div>
       </section>  
       <section>
-        <h2>github my repos </h2>
+        <h2>github my repos <FiGithub /> </h2>
         <Cards>
           {repositories.map(repo =>(
             <div key={repo.id}>
-              <h3>{repo.name}</h3>
+              <h3><FiGithub />  {repo.name}</h3>
               <p>
               {repo.description}
               </p>
@@ -67,7 +67,7 @@ const Home : React.FC<Props> = ({repositories}) => {
               {repo.language && (<span>{repo.language}</span>)}
               </p>
               <p>
-                <a href={repo.html_url}>view</a>
+                <a title={`Visite o repositório ${repo.name}`} href={repo.html_url}>view<FiArrowUpRight /></a>
               </p>
             </div>
           ))}
@@ -91,6 +91,7 @@ export const Container = styled.div`
 section{
   & > h2{
     color: #1AE8AA;
+    
   }
 }  
 footer{
@@ -136,6 +137,15 @@ export const Cards = styled.div`
       width:32%;
     }
     
+    h3{
+      align-items: center;
+      display: inline-flex;
+      
+      svg{
+        margin-right: 10px;
+      }
+    }
+    
     a{
       color: #FFF;
       background: #303030;
@@ -143,6 +153,8 @@ export const Cards = styled.div`
       border-radius: 5px;
       font-size: 14px;
       text-decoration: none;
+      align-items: center;
+      display: inline-flex;
     }
     
     span{
@@ -151,6 +163,7 @@ export const Cards = styled.div`
       font-size: 13px;
       border-radius: 4px;
     }
+    
   }
   
 `;
