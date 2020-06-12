@@ -67,7 +67,7 @@ const Home : React.FC<Props> = ({repositories}) => {
               {repo.language && (<span>{repo.language}</span>)}
               </p>
               <p>
-                <a href={repo.html_url}>View</a>
+                <a href={repo.html_url}>view</a>
               </p>
             </div>
           ))}
@@ -141,12 +141,14 @@ export const Cards = styled.div`
       background: #303030;
       padding: 2px 5px;
       border-radius: 5px;
+      font-size: 14px;
+      text-decoration: none;
     }
     
     span{
       background: #1AE8AA;
       padding:5px;
-      font-size: 14px;
+      font-size: 13px;
       border-radius: 4px;
     }
   }
