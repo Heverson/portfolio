@@ -30,6 +30,7 @@ export const getStaticProps: GetStaticProps = async({params}) => {
 const Home : React.FC<Props> = ({repositories}) => {
   return (
     <>
+      <Strip />
       <Head>
         <title>Heverson Damasceno - Fullstack Developer</title>
         <meta name="description" content="Meu portifólio de trabalhos na web, conheça os projetos que participei e acesse meus contatos." />
@@ -112,6 +113,43 @@ export const Header = styled.header`
     font-size: 50px;
   }
 `;
+
+export const Strip = styled.div`
+    background: rgb(26, 232, 170);
+    width: 100px;
+    height:67%;
+    opacity: 0.9;
+    position: absolute;
+    z-index: -10;
+    transform: skew(-23deg) translateX(-200px);
+    right: 0;
+    top: 0;
+    content: " ";
+    &::before{
+      background: rgb(26, 232, 170);
+      width: 100px;
+      height:100%;
+      opacity: 0.6;
+      position: absolute;
+      z-index: -10;
+      transform:  translateX(-150px);
+      right: 0;
+      top: 0;
+      content: " ";
+    }
+    &::after{
+      background: rgb(26, 232, 170);
+      width: 100px;
+      height:100%;
+      opacity: 0.3;
+      position: absolute;
+      z-index: -10;
+      transform: translateX(-50px);
+      right: 0;
+      top: 0;
+      content: " ";
+    }
+`
 
 export const Cards = styled.div`
   flex-direction: row;
