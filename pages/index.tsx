@@ -16,13 +16,13 @@ type Props = {
 }| any;
 
 export const getStaticProps: GetStaticProps = async({params}) => {
-  const response  = await axios.get(
-    'https://api.github.com/users/heverson/repos?sort=updated'
-  );
+  const res = await fetch('https://api.github.com/users/heverson/repos?sort=updated')
+  const repositories = await res.json()
  
   return {
     props:{
-      repositories: response.data
+      repositories,
+      revalidate: 1
     }
   }
 }
