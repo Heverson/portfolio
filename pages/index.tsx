@@ -75,7 +75,7 @@ const Home : React.FC<Props> = ({repositories}) => {
         </Cards>
       </section>
       <footer>
-        Powered by Me and with NextJS
+        Powered by Me ⚡️
       </footer>  
     </Container>
     </>
